@@ -190,7 +190,7 @@ return text;
 		String property =null;
 		try {
 		Properties p= new Properties();
-		FileReader r= new FileReader("C:\\Users\\Admin1\\Documents\\GitHub\\IHC\\src\\test\\resources\\config data\\IHC.properties");
+		FileReader r= new FileReader("C:\\Users\\Admin1\\Documents\\GitHub\\Triton\\src\\test\\resources\\config data\\Triton.properties");
 		p.load(r);
 		property = p.getProperty(key);
 		}catch(Exception e) {
