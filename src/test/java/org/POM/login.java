@@ -24,7 +24,7 @@ public login() {
 	@FindBy(xpath="//div[@role='status']")
 	private WebElement popup;
 	
-	@FindBy(xpath="//div[text()='Invalid email or password.']")
+	@FindBy(xpath="//div[@class='invalid-feedback d-block']")
 	private WebElement warning;
 	
 	

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.*;
 
 public class Login extends Baseclass {
-	public static login l= new login();
+	 login l= new login();
 	
 	@Given("The User is on the login page")
 	public void the_user_is_on_the_login_page() {
