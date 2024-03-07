@@ -23,13 +23,13 @@ public class Hooksclass extends Baseclass {
             
         }
 		
-		//BrowersQuit();
+		BrowersQuit();
 
 	}
 	@Before
 	public static void Beforescenario() {
 		
-		Browerlauch("firefox");
+		Browerlauch("chrome");
 		
 	}
 

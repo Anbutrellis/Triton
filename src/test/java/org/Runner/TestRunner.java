@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\features", dryRun = true, glue = "org.Stepdefnitions", monochrome = true, plugin = {
+@CucumberOptions(features = "src\\test\\resources\\features", dryRun = false, glue = "org.Stepdefnitions", monochrome = true,tags ="@1", plugin = {
 		"pretty", "json:src\\test\\resources\\reports\\jsonReport\\jsonReport.json",
 		"rerun:src\\test\\resources\\reports\\FailedReport\\failedscenario.txt" })
 public class TestRunner {
