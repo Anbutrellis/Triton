@@ -2,47 +2,46 @@ Feature: Triton Registration Process Verification
 
   Background:
     Given I click on the invitation link in the email
+    
+    @2
+    Scenario: Verify the Registration process
+    When The user enter the value in the First name and second name fields
+  	And The user has to enter the value in the company name field
+  	And The user has to  enter the value in the both Password and confirm fields
+  	Then The application should show in the final step "The user has been registered successfully"
 
-  Scenario Outline: Verify the "First name" and "Last name" fields with valid and invalid data
-    When I click on the "<field>" field
-    And I enter "<valid_data>" in the field
-    Then the application should allow only specified characters for valid data
-    And the application should not allow the specified characters for invalid data
-
-    Examples:
-      | field      | valid_data | invalid_data |
-      | First Name | John123    | John@123     |
-      | Last Name  | Doe456     | Doe@456      |
-      | First Name | Alice2021  | Alice#2021   |
-      | Last Name  | MarySmith  | Mary$Smith   |
-      | First Name | BobSmith   | Bob$mith     |
-      | Last Name  | Johnson    | Johnson#     |
 
   Scenario Outline: Verify warning messages for missing data in fields
-    When I click on the "<field>" field
-    And I click on another field
-    Then the application should show the warning message "This field is required"
+    When I click on the "<field>" field and without filling data click next field
+    Then the application should show the warning message in the user profile step "This field is required."
 
     Examples:
       | field       |
-      | First Name  |
-      | Last Name   |
-      | Email       |
+      | FirstName  |
+      | LastName   |
+      
+	Scenario: Verify warning messages for missing data in field
+	When I enter the "QA" and "Test" in the First name and second name fields
+	And I click on the next button without filling the data in the company name field
+	Then The application should show the Warning message in the company detail steps "This field is required."
 
+	
   Scenario Outline: Verify password validation and mismatch warning
-    When I enter "<password>" in the Password field
+  	When I enter the "QA" and "Test" in the First name and second name fields
+  	And I enter the "Brillio" in the company name field 
+    And I enter "<password>" in the Password field
     And I enter "<confirm_password>" in the Confirm Password field
-    Then the application should show the warning message "Password and confirm password must match."
+    Then the application should show the warning message in the password field "Password and confirm password must match."
 
     Examples:
       | password  | confirm_password |
-      | pass123   | pass123          |
       | secret456 | secret123        |
       | abc@123   | 123@abc          |
 
   Scenario: Verify the "Back" button from the Security field
-    When I enter "password123" in the Password field
+  When I enter the "QA" and "Test" in the First name and second name fields
+  	And I enter the "Brillio" in the company name field
+    And I enter "password123" in the Password field
     And I enter "password123" in the Confirm Password field
-    And I click on the Password field
     And I click on the back button
     Then the application should navigate back to the Company profile
