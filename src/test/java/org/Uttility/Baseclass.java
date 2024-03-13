@@ -64,7 +64,7 @@ public class Baseclass {
 
 	public static void sendkeys(WebElement e, String data) {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(20));
-		w.until(ExpectedConditions.visibilityOf(e));
+		w.until(ExpectedConditions.visibilityOfAllElements(e));
 		try {
 			e.sendKeys(data);
 			
@@ -225,12 +225,13 @@ return text;
 		e.clear();
 		
 	}
-	 public static void setDefaultTimeUsingJQuery( WebElement e, String data) {
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('default-time','"+data+"')", e);
-		  
-	 
-	 }	
+	 	
+	public static void frames(WebElement traget) {
+		driver.switchTo().frame(traget);
+	}
+	public static void framesout(WebElement traget) {
+		driver.switchTo().defaultContent();
+	}
 	
 	
 	
