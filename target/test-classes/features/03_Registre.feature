@@ -3,14 +3,6 @@ Feature: Triton Registration Process Verification
   Background:
     Given I click on the invitation link in the email
     
-    @2
-    Scenario: Verify the Registration process
-    When The user enter the value in the First name and second name fields
-  	And The user has to enter the value in the company name field
-  	And The user has to  enter the value in the both Password and confirm fields
-  	Then The application should show in the final step "The user has been registered successfully"
-
-
   Scenario Outline: Verify warning messages for missing data in fields
     When I click on the "<field>" field and without filling data click next field
     Then the application should show the warning message in the user profile step "This field is required."
@@ -35,7 +27,7 @@ Feature: Triton Registration Process Verification
 
     Examples:
       | password  | confirm_password |
-      | secret456 | secret123        |
+      | secret@456 | secret@123        |
       | abc@123   | 123@abc          |
 
   Scenario: Verify the "Back" button from the Security field
@@ -45,3 +37,14 @@ Feature: Triton Registration Process Verification
     And I enter "password123" in the Confirm Password field
     And I click on the back button
     Then the application should navigate back to the Company profile
+    
+    
+    
+    
+    
+    
+    Scenario: Verify the Registration process
+    When The user enter the value in the First name and second name fields
+  	And The user has to enter the value in the company name field
+  	And The user has to  enter the value in the both Password and confirm fields
+  	Then The application should show in the final step "The user has been registered successfully"

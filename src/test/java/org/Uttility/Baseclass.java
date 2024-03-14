@@ -181,10 +181,14 @@ return text;
 
 	}
 	
-	public static void loop(int Howmanytime,WebElement e) {
-		for (int i = 0; i <Howmanytime ; i++) {
-			click(e);
+	public static void time(int wait) {
+		try {
+			Thread.sleep(wait);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+			
+		
 	}
 	public static String Getdata(String key) {
 		String property =null;

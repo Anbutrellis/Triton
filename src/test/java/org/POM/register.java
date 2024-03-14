@@ -10,7 +10,7 @@ public class register extends Baseclass {
 public register() {
 	PageFactory.initElements(driver, this);
 }
-	@FindBy(xpath="(//input[@class='form-control '])[1]")
+	@FindBy(xpath="//label[text()='First Name ']//following::input[@name='firstName']")
 	private WebElement firstName;
 	
 	@FindBy(name="lastName")
@@ -55,8 +55,15 @@ public register() {
 	@FindBy(id="html_msg_body")
 	private WebElement frame;
 	
+	@FindBy(xpath="//label[text()='Confirm Password ']")
+	private WebElement click;
 	
 	
+	
+	public WebElement getClick() {
+		return click;
+	}
+
 	public WebElement getFrame() {
 		return frame;
 	}

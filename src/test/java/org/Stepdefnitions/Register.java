@@ -19,10 +19,11 @@ public class Register extends Baseclass {
 		frames(r.getFrame());
 		click(r.getInvitationURL());
 		framesout(r.getFrame());
-		windowshandle(0);
+		windowshandle(2);
 	 }
 	 @When("The user enter the value in the First name and second name fields")
 	 public void the_user_enter_the_value_in_the_first_name_and_second_name_fields() {
+		 time(5000);
 		 sendkeys(r.getFirstName(), Getdata("firstname"));
 			sendkeys(r.getLastName(), Getdata("lastname"));
 			click(r.getNextbutton());
@@ -73,6 +74,7 @@ public class Register extends Baseclass {
 	 
 	 @When("I enter the {string} and {string} in the First name and second name fields")
 	 public void i_enter_the_and_in_the_first_name_and_second_name_fields(String string, String string2) {
+		 time(5000);
 		 sendkeys(r.getFirstName(), string);
 			sendkeys(r.getLastName(), string2);
 			click(r.getNextbutton());
@@ -103,6 +105,7 @@ public class Register extends Baseclass {
 	 @When("I enter {string} in the Confirm Password field")
 	 public void i_enter_in_the_confirm_password_field(String string) {
 		 sendkeys(r.getConfirmPassword(), string);
+		 click(r.getClick());
 	 }
 	 @Then("the application should show the warning message in the password field {string}")
 	 public void the_application_should_show_the_warning_message_in_the_password_field(String string) {
