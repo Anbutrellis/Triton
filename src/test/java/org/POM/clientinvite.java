@@ -22,6 +22,22 @@ public class clientinvite extends Baseclass {
 	@FindBy(xpath = "//button[text()='Invite']")
 	private WebElement invitebtn;
 
+	@FindBy(xpath="//table[@responsivedata-testid='tableRecord']//tr[1]/td[2]")
+	private WebElement tableemailid;
+	
+	@FindBy(xpath="//h4[@class='modal-title']")
+	private WebElement title;
+	
+	
+	
+	public WebElement getTitle() {
+		return title;
+	}
+
+	public WebElement getTableemailid() {
+		return tableemailid;
+	}
+
 	public WebElement getRole() {
 		return role;
 	}
