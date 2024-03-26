@@ -18,7 +18,7 @@ public login() {
 	@FindBy(xpath="//button[text()='Log in']")
 	private WebElement login;
 	
-	@FindBy(xpath="//span[text()='Admin Triton']")
+	@FindBy(xpath="//span[@class='text-end ms-2']")
 	private WebElement username;
 	
 	@FindBy(xpath="//div[@role='status']")

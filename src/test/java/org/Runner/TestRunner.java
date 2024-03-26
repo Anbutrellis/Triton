@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "C:\\Users\\Admin1\\Documents\\GitHub\\Triton\\src\\test\\resources\\features\\02_clientinvite.feature", 
+@CucumberOptions(features = "C:\\Users\\Admin1\\Documents\\GitHub\\Triton\\src\\test\\resources\\features\\05_fileupload.feature", 
 dryRun = false, glue = "org.Stepdefnitions", monochrome = true, plugin = {
 		"pretty", "json:src\\test\\resources\\reports\\jsonReport\\jsonReport.json",
 		"rerun:src\\test\\resources\\reports\\FailedReport\\failedscenario.txt" })
