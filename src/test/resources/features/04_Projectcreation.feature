@@ -1,12 +1,12 @@
 Feature: Project Creation
 
-
+@1
 Scenario: No Projects Available
      Given I am logged in to the Application
     When I click on the "Projects" option in the side menu
     Then I should see a message indicating "No Records Found"
   
-
+@1
   Scenario: User creates a new project successfully
     Given I am logged in to the Application
     When I navigate to the "Create Project" page
@@ -16,7 +16,7 @@ Scenario: No Projects Available
     And the new project should appear in my project list
 
   
-
+@1
   Scenario: User cancels project creation
     Given I am logged in to the Application
     When I navigate to the "Create Project" page

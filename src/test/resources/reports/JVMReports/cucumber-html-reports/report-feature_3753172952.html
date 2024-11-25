@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>IHC</td>
-      <td>26 Mar 2024, 11:35</td>
+      <td>24 Apr 2024, 12:04</td>
     </tr>
   </tbody>
 </table>
@@ -128,17 +128,17 @@ $(document).ready(function() {
         <tr>
           <td class="tagname">Project Creation</td>
           <td      class="passed"    >11</td>
+          <td      class="failed"    >2</td>
           <td >0</td>
-          <td     class="skipped"   >1</td>
           <td >0</td>
-          <td   class="undefined" >1</td>
+          <td >0</td>
           <td class="total">13</td>
 
-          <td  class="passed"    >2</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >2</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="1995200">0.001</td>
+          <td class="duration" data-value="110707390600">1:50.707</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -189,7 +189,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">40.110</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -227,7 +227,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Beforescenario()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">4.426</span>
 
           </div>
 
@@ -264,7 +264,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I am logged in to the Application</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">16.292</span>
 
 </div>
 
@@ -287,11 +287,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When undefined">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">I click on the &quot;Projects&quot; option in the side menu</span>
+  <span class="name">I click on the <span class="argument">&quot;Projects&quot;</span> option in the side menu</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">3.650</span>
 
 </div>
 
@@ -314,11 +314,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a message indicating &quot;No projects available&quot;</span>
+  <span class="name">I should see a message indicating <span class="argument">&quot;No Records Found&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">20.167</span>
 
 </div>
 
@@ -326,6 +326,47 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h6[@class='text-center w-100 py-2 bg-white']&quot;}
+  (Session info: chrome=124.0.6367.61)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1a9534db0a8e9072952806c0eef03f1f, findElement {using=xpath, value=//h6[@class='text-center w-100 py-2 bg-white']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.78 (a087f2dd364d..., userDataDir: C:\Users\Admin1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54739}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54739/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a9534db0a8e9072952806c0eef03f1f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.getText(Unknown Source)
+	at org.Stepdefnitions.projectcreation.i_should_see_a_message_indicating(projectcreation.java:68)
+	at &#10045;.I should see a message indicating &quot;No Records Found&quot;(file:///C:/Users/Admin1/Documents/GitHub/Triton/src/test/resources/features/04_Projectcreation.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -345,7 +386,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -357,13 +398,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Afterscenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.064</span>
 
           </div>
 
@@ -372,6 +413,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
+      <a>Screenshot</a>
+      <a href="embeddings/embedding_804427844.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-6" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_804427844.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -388,12 +444,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">36.257</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">User creates a new project successfully</span>
 
@@ -404,11 +460,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-8">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -420,13 +476,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-6" class="inner-level collapse collapsable-details ">
+    <div id="before-8" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Beforescenario()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.517</span>
 
           </div>
 
@@ -443,9 +499,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -455,7 +511,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -463,7 +519,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I am logged in to the Application</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">21.761</span>
 
 </div>
 
@@ -490,7 +546,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I navigate to the <span class="argument">&quot;Create Project&quot;</span> page</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">11.818</span>
 
 </div>
 
@@ -517,7 +573,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I fill in the project details:</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">2.384</span>
 
 </div>
 
@@ -544,7 +600,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I click the Create button</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.183</span>
 
 </div>
 
@@ -571,7 +627,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see a success message confirming the project creation</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.059</span>
 
 </div>
 
@@ -594,11 +650,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
   <span class="name">the new project should appear in my project list</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.049</span>
 
 </div>
 
@@ -606,6 +662,23 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Verify the Project name in the project list. Actual: Test001
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failEquals(Assert.java:187)
+	at org.junit.Assert.assertNotEquals(Assert.java:163)
+	at org.Stepdefnitions.projectcreation.the_new_project_should_appear_in_my_project_list(projectcreation.java:56)
+	at &#10045;.the new project should appear in my project list(file:///C:/Users/Admin1/Documents/GitHub/Triton/src/test/resources/features/04_Projectcreation.feature:16)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -625,7 +698,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -637,13 +710,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-8" class="inner-level collapse collapsable-details ">
+    <div id="after-11" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Afterscenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.190</span>
 
           </div>
 
@@ -652,6 +725,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
+      <a>Screenshot</a>
+      <a href="embeddings/embedding_2141425266.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-12" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_2141425266.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -668,10 +756,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">34.339</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -684,11 +772,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-9" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-14">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -700,13 +788,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-10" class="inner-level collapse collapsable-details ">
+    <div id="before-14" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Beforescenario()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.377</span>
 
           </div>
 
@@ -723,7 +811,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -735,7 +823,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-15" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -743,7 +831,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I am logged in to the Application</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">17.379</span>
 
 </div>
 
@@ -770,7 +858,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I navigate to the <span class="argument">&quot;Create Project&quot;</span> page</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">15.956</span>
 
 </div>
 
@@ -797,7 +885,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I click the Cancel button</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.953</span>
 
 </div>
 
@@ -824,7 +912,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should be redirected to the project dashboard</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.049</span>
 
 </div>
 
@@ -851,7 +939,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -863,13 +951,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-12" class="inner-level collapse collapsable-details ">
+    <div id="after-16" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">org.Stepdefnitions.Hooksclass.Afterscenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.577</span>
 
           </div>
 

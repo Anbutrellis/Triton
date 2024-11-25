@@ -1,13 +1,22 @@
 package org.Uttility;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.sl.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -64,7 +73,7 @@ public class Baseclass {
 
 	public static void sendkeys(WebElement e, String data) {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(20));
-		w.until(ExpectedConditions.visibilityOfAllElements(e));
+		w.until(ExpectedConditions.visibilityOf(e));
 		try {
 			e.sendKeys(data);
 			
@@ -239,9 +248,10 @@ return text;
 	
 	
 	
-	    
-	    
-	    
+	public static boolean isConditionMet(WebElement indicator) {
+	    String classAttribute = indicator.getAttribute("class");
+	    return classAttribute.contains("ri-check-fill"); // tick icon indicates the condition is met
+	}
 	    
 	    
 	    

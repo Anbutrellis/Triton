@@ -23,7 +23,7 @@ public class Uploadfile extends Baseclass {
 	@FindBy(xpath="//div[@class='react-select__indicators css-1wy0on6']")
 	private List<WebElement> dropdown;
 	
-	@FindBy(xpath="(//label[text()='Upload Files']//following::div//span)[1]")
+	@FindBy(xpath="/html/body/div[3]/div/div[1]/div/div/form/div[1]/div[3]/div/div/div/input")
 	private WebElement Fileupload;
 	
 	@FindBy(xpath="//div[text()='Questionnaire']")

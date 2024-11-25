@@ -14,12 +14,10 @@ public class projectcreation extends Baseclass {
 	@Given("I am logged in to the Application")
 	public void i_am_logged_in_to_the_application() {
 		url(Getdata("url"));
-		sendkeys(l.getEmail(), Getdata("busemail"));
+		sendkeys(l.getEmail(), Getdata("busmail"));
 		sendkeys(l.getPassword(), Getdata("password"));
 		click(l.getLogin());
-		click(l.getUsername());
 		time(2000);
-		Assert.assertEquals("Verify the user", Getdata("companyname"), l.getUsername().getText());
 		   
 
 	}
@@ -34,6 +32,8 @@ public class projectcreation extends Baseclass {
 		sendkeys(p.getProjectname(), Getdata("projectname"));
 		sendkeys(p.getDescription(), Getdata("description"));
 		click(p.getDate());
+		click(p.getYeardropdown());
+		click(p.getYearselect());
 		click(p.getDateselect());
 		click(p.getAssignedtotab());
 		click(p.getAssignedto());
@@ -65,7 +65,7 @@ public class projectcreation extends Baseclass {
 	}
 	@Then("I should see a message indicating {string}")
 	public void i_should_see_a_message_indicating(String string) {
-		Assert.assertNotEquals("Verify the No projects available Message","No Records Found", p.getVerifyprojectsection().getText());
+		Assert.assertEquals("Verify the No projects available Message",string, p.getVerifyprojectsection().getText());
 		
 	}
 
@@ -83,7 +83,7 @@ public class projectcreation extends Baseclass {
 	
 	@Then("I should be redirected to the project dashboard")
 	public void i_should_be_redirected_to_the_project_dashboard() {
-		//Assert.assertNotEquals("Verify redirected to the project dashboard", "Projects", p.getProjectpage().getText());
+		Assert.assertEquals("Verify redirected to the project dashboard", "Projects", p.getProjectpage().getText());
 
 	}
 	

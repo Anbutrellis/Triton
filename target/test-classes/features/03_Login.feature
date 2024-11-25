@@ -1,5 +1,5 @@
 Feature: Verify the Login Functionality  
-  
+  @1
  		Scenario Outline: User login with invalid credentials
     Given The User is on the login page
     When The user has to enter  "<username>" and  "<password>" 
@@ -11,7 +11,7 @@ Feature: Verify the Login Functionality
     | anbuselvan@trellissoft.ai  | Trellis123 |
     |                            |  |
     
-
+@1
 	Scenario: User login with valid credentials
     Given The User is on the login page
     When The user has to enter valid username and password 

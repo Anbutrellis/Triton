@@ -58,8 +58,16 @@ public register() {
 	@FindBy(xpath="//label[text()='Confirm Password ']")
 	private WebElement click;
 	
+	@FindBy(xpath="//button[text()='Finish']")
+	private WebElement Finish;
 	
 	
+	
+	
+	public WebElement getFinish() {
+		return Finish;
+	}
+
 	public WebElement getClick() {
 		return click;
 	}

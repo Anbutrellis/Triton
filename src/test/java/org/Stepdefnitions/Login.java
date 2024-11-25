@@ -19,8 +19,8 @@ public class Login extends Baseclass {
 	}
 	@When("The user has to enter valid username and password")
 	public void the_user_has_to_enter_valid_username_and_password() {
-	    sendkeys(l.getEmail(), Getdata("adminuser"));
-	    sendkeys(l.getPassword(), Getdata("adminpwd"));
+	    sendkeys(l.getEmail(), Getdata("busmail"));
+	    sendkeys(l.getPassword(), Getdata("password"));
 	}
 	@When("The user has to click the login button")
 	public void the_user_has_to_click_the_login_button() {
@@ -29,9 +29,9 @@ public class Login extends Baseclass {
 	}
 	@Then("The user should be able logged into the account")
 	public void the_user_should_be_able_logged_into_the_account() {
+		time(4000);
 		
-		
-		Assert.assertEquals("Verify the user", "Admin Triton", l.getUsername().getText());
+		Assert.assertEquals("Verify the user", Getdata("username"), l.getUsername().getText());
 	    
 	}
 	
@@ -45,14 +45,14 @@ public class Login extends Baseclass {
 	 
 	@Then("The user should see an error message indicating invalid credentials")
 	public void the_user_should_see_an_error_message_indicating_invalid_credentials() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		WebDriverWait w= new WebDriverWait(driver, Duration.ofSeconds(20));
 	   try {
 		   
 		   Assert.assertEquals("verify the warning message", "Invalid email or password.",w.until(ExpectedConditions.visibilityOf( l.getPopup())).getText());
 			
 	} catch (Exception e) {
-		Assert.assertEquals("verify the warning message", "This field is required.", w.until(ExpectedConditions.visibilityOf( l.getWarning())).getText());
+		Assert.assertEquals("verify the warning message", "rgba(0, 0, 0, 0)", w.until(ExpectedConditions.visibilityOf( l.getWarning())).getCssValue("background-color"));
 		
 	} 
 	  

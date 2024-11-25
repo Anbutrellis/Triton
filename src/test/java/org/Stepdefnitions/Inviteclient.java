@@ -27,6 +27,7 @@ public class Inviteclient extends Baseclass {
 	}
 	@When("the user clicks on the {string} button.")
 	public void the_user_clicks_on_the_button(String string) {
+		sleep(5000);
 		Assert.assertEquals("Verify the role", "Admin Triton", l.getUsername().getText());
 		click(c.getInviteclientbtn());
 		
@@ -34,15 +35,15 @@ public class Inviteclient extends Baseclass {
 	}
 	@When("the user enters the Email ID of the client.")
 	public void the_user_enters_the_email_id_of_the_client() {
-		sendkeys(c.getBusinessemail(),Getdata("busemail"));
+		sendkeys(c.getBusinessemail(),Getdata("busmail"));
 		click(c.getInvitebtn());
 
 	}
 	@Then("the user verifies whether the client is invited or not.")
 	public void the_user_verifies_whether_the_client_is_invited_or_not() {
 		refresh();
-		Assert.assertEquals("Verify whether the client is invited or not", ""+Getdata("busemail")+"", c.getTableemailid().getText());
-
+		Assert.assertEquals("Verify whether the client is invited or not", ""+Getdata("busmail")+"", c.getTableemailid().getText());
+sleep(30000);
 	}
 	
 	

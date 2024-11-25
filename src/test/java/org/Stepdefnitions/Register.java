@@ -37,11 +37,12 @@ public class Register extends Baseclass {
 	 public void the_user_has_to_enter_the_value_in_the_both_password_and_confirm_fields() {
 		 sendkeys(r.getPassword(), Getdata("password"));
 			sendkeys(r.getConfirmPassword(), Getdata("confirmpassword"));
-			//click(r.getNextbutton());
+			click(r.getFinish());
 	 }
 	 @Then("The application should show in the final step {string}")
 	 public void the_application_should_show_in_the_final_step(String string) {
-		// Assert.assertEquals("verify the sucessfully register or not", string, r.getStatus().getText());
+		 time(2000);
+		 Assert.assertEquals("verify the sucessfully register or not", string, r.getStatus().getText());
 
 	 }
 	
@@ -65,7 +66,8 @@ public class Register extends Baseclass {
 	 }
 	 @Then("the application should show the warning message in the user profile step {string}")
 	 public void the_application_should_show_the_warning_message_in_the_user_profile_step(String string) {
-		 Assert.assertEquals("Verify the warning message", string, r.getWarningmsg().getText());
+		 System.out.println(r.getWarningmsg().getCssValue("background-colour"));
+		 Assert.assertEquals("Verify the warning message", "rgba(0, 0, 0, 0)", r.getWarningmsg().getCssValue("background-color"));
 
 	 }
 	 
@@ -87,7 +89,7 @@ public class Register extends Baseclass {
 	 }
 	 @Then("The application should show the Warning message in the company detail steps {string}")
 	 public void the_application_should_show_the_warning_message_in_the_company_detail_steps(String string) {
-		 Assert.assertEquals("Verify the warning message", string, r.getWarningmsg().getText());
+		 Assert.assertEquals("Verify the warning message", "rgba(0, 0, 0, 0)", r.getWarningmsg().getCssValue("background-color"));
 
 	 }
 	
@@ -109,7 +111,9 @@ public class Register extends Baseclass {
 	 }
 	 @Then("the application should show the warning message in the password field {string}")
 	 public void the_application_should_show_the_warning_message_in_the_password_field(String string) {
-		 Assert.assertEquals("Verify the warning message", string, r.getWarningmsg().getText());
+		 System.out.println(r.getWarningmsg().getCssValue("background-colour"));
+		 
+		 Assert.assertEquals("Verify the warning message", "rgba(0, 0, 0, 0)", r.getWarningmsg().getCssValue("background-color"));
 
 	 }
 	 

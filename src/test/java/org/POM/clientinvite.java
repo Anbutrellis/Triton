@@ -13,7 +13,7 @@ public class clientinvite extends Baseclass {
 	@FindBy(xpath = "//span[@class='text-end ms-2']")
 	private WebElement role;
 
-	@FindBy(xpath = "//button[@type='submit']")
+	@FindBy(xpath = "(//button[@type='submit'])[2]")
 	private WebElement inviteclientbtn;
 
 	@FindBy(name = "business_email")

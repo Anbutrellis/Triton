@@ -1,5 +1,5 @@
 Feature: Invite Client
-
+@1
 Scenario: Verify the Invite client process with invalid data
 
 Given the user has logged in with Admin credentials.
@@ -10,7 +10,7 @@ Then the user verifies the Warning message "Email is not valid"
 
 
 
-
+@1
 Scenario: Verify the Invite client process
 Given the user has logged in with Admin credentials.
 

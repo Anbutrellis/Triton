@@ -27,10 +27,10 @@ public class Projectcreation extends Baseclass {
 	@FindBy(xpath="(//i[@class='bi-calendar-check calendar-input-icon text-muted border-start'])[4]")
 	private WebElement date;
 	
-	@FindBy(xpath="//div[@class='react-datepicker__day react-datepicker__day--022 react-datepicker__day--keyboard-selected react-datepicker__day--today']")
+	@FindBy(xpath="//div[@class='react-datepicker__day react-datepicker__day--001']")
 	private WebElement dateselect;
 	
-	@FindBy(xpath="//div[text()='QA 002']")
+	@FindBy(id="react-select-5-option-0")
 	private WebElement assignedto;
 	
 	@FindBy(xpath="(//div[@class='react-select__indicators css-1wy0on6'])[4]")
@@ -54,9 +54,23 @@ public class Projectcreation extends Baseclass {
 	@FindBy(xpath="//h6[@class='text-center w-100 py-2 bg-white']")
 	private WebElement verifyprojectsection;
 	
+	@FindBy(xpath="//span[@class='react-datepicker__year-read-view--down-arrow']")
+	private WebElement yeardropdown;
+	
+	@FindBy(xpath="//div[text()='2026']")
+	private WebElement yearselect;
 	
 	
 	
+	
+
+	public WebElement getYeardropdown() {
+		return yeardropdown;
+	}
+
+	public WebElement getYearselect() {
+		return yearselect;
+	}
 
 	public WebElement getVerifyprojectsection() {
 		return verifyprojectsection;
